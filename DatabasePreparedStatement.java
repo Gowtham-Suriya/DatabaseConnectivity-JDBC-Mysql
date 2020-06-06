@@ -7,13 +7,13 @@ public class DatabasePreparedStatement {
             Class.forName("com.mysql.cj.jdbc.Driver");  
             Connection con=DriverManager.getConnection(  
                             "jdbc:mysql://localhost:3306/gowtham","root","root");  
-            PreparedStatement st=con.prepareStatement("insert into student values(default,?,?,?)");  
-            st.setString(1,"anand");
-            st.setString(2, "Anand123@gmail.com");
+            PreparedStatement st=con.prepareStatement("insert into student values(default,?,?,?)");  //prepared statments
+            st.setString(1,"Gowtham");
+            st.setString(2, "gowthamsuriyad@gmail.com");
             st.setInt(3,421);
 
             int rs=st.executeUpdate();
-            if(rs==1){
+            if(rs==1){                          //check whether the given statment is connected
             System.out.println("updated");
             }
             else
